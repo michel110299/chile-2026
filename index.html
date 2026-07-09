@@ -190,6 +190,11 @@
   .citem span:last-child{font-size:.94rem;transition:.15s}
   .citem.done span:last-child{color:var(--stone);text-decoration:line-through}
   .check-note{margin-top:24px;color:var(--stone);font-size:.86rem}
+  .check-reset{background:none;border:1px solid var(--line);color:var(--stone);cursor:pointer;
+    font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
+    border-radius:999px;padding:6px 12px;margin-left:12px;transition:border-color .15s,color .15s}
+  .check-reset:hover{border-color:var(--wine);color:#e08a98}
+  .check-saved{font-family:"Space Mono",monospace;font-size:.68rem;letter-spacing:.05em;color:#7fd6a8}
 
   /* ============ STAY ============ */
   .stay{background:var(--deep)}
@@ -280,12 +285,12 @@
       <div class="fact">
         <div class="lab">Hospedagem</div>
         <div class="val">Airbnb</div>
-        <div class="sub paid">&#10003; pago</div>
+        <div class="sub paid">R$ 1.782 &#10003;</div>
       </div>
       <div class="fact">
         <div class="lab">Passagem aérea</div>
         <div class="val">Voo</div>
-        <div class="sub paid">&#10003; pago</div>
+        <div class="sub paid">R$ 3.200 &#10003;</div>
       </div>
       <div class="fact">
         <div class="lab">Dias de esqui</div>
@@ -428,25 +433,29 @@
     <h2>Orçamento</h2>
 
     <div class="btable">
-      <div class="brow"><span class="name">Hospedagem (Airbnb)</span><span class="pill ok">Pago</span><span class="price">—</span></div>
-      <div class="brow"><span class="name">Passagem aérea</span><span class="pill ok">Pago</span><span class="price">—</span></div>
+      <div class="brow"><span class="name">Hospedagem (Airbnb)</span><span class="pill ok">Pago</span><span class="price">R$ 1.782</span></div>
+      <div class="brow"><span class="name">Passagem aérea</span><span class="pill ok">Pago</span><span class="price">R$ 3.200</span></div>
       <div class="brow"><span class="name">Passeios (pacote)</span><span class="pill set">Fechado</span><span class="price">R$ 1.827</span></div>
       <div class="brow"><span class="name">Transfer aeroporto</span><span class="pill set">Fechado</span><span class="price">R$ 320</span></div>
       <div class="brow"><span class="name">Ingresso vinícola (Alyan)</span><span class="pill todo">Comprar lá</span><span class="price">R$ 600</span></div>
       <div class="brow"><span class="name">Ingresso El Colorado</span><span class="pill todo">Comprar</span><span class="price">R$ 340</span></div>
       <div class="brow"><span class="name">Ingresso Valle Nevado</span><span class="pill todo">Comprar</span><span class="price">R$ 340</span></div>
-      <div class="brow"><span class="name">Aluguel de equipamento · 2 dias (casal)</span><span class="pill todo">A definir</span><span class="price">~R$ 800–1.400</span></div>
+      <div class="brow"><span class="name">Equipamento + roupa · 2 dias &times; R$ 600 (casal)</span><span class="pill todo">Comprar</span><span class="price">R$ 1.200</span></div>
     </div>
 
     <div class="btotal" style="margin-top:16px;border-radius:14px">
-      <div><div class="lab">Subtotal por casal · já com valor</div></div>
-      <div class="big">R$ 3.427</div>
+      <div><div class="lab">Já pago por casal · Airbnb + voo</div></div>
+      <div class="big" style="font-size:1.5rem;color:#7fd6a8">R$ 4.982</div>
+    </div>
+    <div class="btotal" style="margin-top:12px;border-radius:14px;background:linear-gradient(120deg,#12344c,#1b4e70)">
+      <div><div class="lab">Total por casal · tudo incluído</div></div>
+      <div class="big">R$ 9.609</div>
     </div>
     <div class="btotal" style="margin-top:12px;border-radius:14px;background:linear-gradient(120deg,#0e2a3e,#123a55)">
       <div><div class="lab">Os 3 casais juntos · × 3</div></div>
-      <div class="big">R$ 10.281</div>
+      <div class="big">R$ 28.827</div>
     </div>
-    <p class="note">Todos os valores acima são <b style="color:var(--frost)">por casal</b>, fora hospedagem e aérea (já pagos). Falta só definir o equipamento para fechar a conta — estimativa de R$ 800 a 1.400 por casal (2 pessoas) nos dois dias.</p>
+    <p class="note">Todos os valores são <b style="color:var(--frost)">por casal</b>. Airbnb e voo já pagos (R$ 4.982); passeios, transfer e ingressos somam R$ 3.427; e o equipamento com a roupa fecha em R$ 1.200 (2 dias × R$ 600). A conta está fechada — falta só comprar os ingressos e o equipamento.</p>
   </div>
 </section>
 
@@ -496,11 +505,11 @@
     <div class="check-panel">
       <div class="check-top">
         <span class="who" id="who">—</span>
-        <span class="cnt"><b id="cdone">0</b> / <span id="ctotal">0</span> itens</span>
+        <span class="cnt"><b id="cdone">0</b> / <span id="ctotal">0</span> itens<button class="check-reset" id="creset" type="button">&#8635; Zerar</button></span>
       </div>
       <div class="check-bar"><i id="cbar"></i></div>
       <div class="clists" id="clists"></div>
-      <p class="check-note">Itens pessoais — documentos e roupas — cada pessoa do casal precisa dos seus. O que dá pra dividir, como adaptador e power bank, basta um por casal.</p>
+      <p class="check-note"><span class="check-saved" id="csaved">&#10003; salvo neste aparelho</span> · as marcações ficam guardadas no navegador do celular por 90 dias. Itens pessoais — documentos e roupas — cada pessoa do casal precisa dos seus; o que dá pra dividir, como adaptador e power bank, basta um por casal.</p>
     </div>
   </div>
 </section>
@@ -556,9 +565,13 @@
 (function(){
   var COUPLES = ['Gabriel & Isabela','Leo & Maria','Yasmin & Michel'];
   var GROUPS = [
-    {t:'Documentos', items:['Passaporte / RG (cada um)','Vouchers dos passeios','Seguro viagem','Pesos chilenos / cartão']},
-    {t:'Roupa de neve', items:['Jaqueta impermeável','Calça de neve','Luvas impermeáveis','Gorro e cachecol','Óculos de sol + máscara','Segunda pele térmica','Meias grossas de lã','Protetor solar + labial']},
-    {t:'Geral', items:['Adaptador de tomada','Carregadores + power bank','Remédios pessoais','Necessaire','Sacola p/ roupa molhada']}
+    {t:'📄 Documentos', items:['Passaporte ou RG','Passagens','Reservas (hotel, passeios, carro)','Seguro viagem','Cartão de crédito']},
+    {t:'👕 Roupas', items:['Casaco quente','Jaqueta corta-vento','Roupas para 5 dias','Pijama','Roupa íntima e meias','Tênis confortável']},
+    {t:'❄️ Esqui', items:['2 blusas térmicas (segunda pele)','2 calças térmicas','2 pares de meias térmicas','Gorro','Luvas','Óculos de sol','Protetor labial','Protetor solar','Alugar no Chile: jaqueta, calça impermeável, botas, capacete e equipamentos']},
+    {t:'🧴 Higiene', items:['Escova e pasta de dentes','Shampoo e sabonete','Desodorante','Hidratante']},
+    {t:'💊 Saúde', items:['Remédios de uso contínuo','Analgésico','Antialérgico']},
+    {t:'📱 Eletrônicos', items:['Celular','Carregador','Power bank','Adaptador de tomada']},
+    {t:'🎒 Mochila de mão', items:['Documentos','Carregadores','Casaco','Remédios','Garrafa de água']}
   ];
   var TOTAL = 0;
   GROUPS.forEach(function(g){ TOTAL += g.items.length; });
@@ -566,6 +579,37 @@
   var state = {};
   COUPLES.forEach(function(c){ state[c] = {}; });
   var active = COUPLES[0];
+
+  // ----- salvar no navegador por 90 dias -----
+  var STORE_KEY = 'chile_checklist_v1';
+  var TTL = 90*24*60*60*1000; // 90 dias em ms
+  var canSave = true;
+
+  function loadState(){
+    try{
+      var obj = JSON.parse(window.localStorage.getItem(STORE_KEY));
+      if(!obj || !obj.data) return null;
+      var base = obj.firstSaved || obj.savedAt || Date.now();
+      if(Date.now() - base > TTL){ try{ window.localStorage.removeItem(STORE_KEY); }catch(e){} return null; }
+      return obj.data;
+    }catch(e){ canSave = false; return null; }
+  }
+  function saveState(){
+    if(!canSave) return;
+    try{
+      var prev = null; try{ prev = JSON.parse(window.localStorage.getItem(STORE_KEY)); }catch(e){}
+      var first = (prev && prev.firstSaved) ? prev.firstSaved : Date.now();
+      window.localStorage.setItem(STORE_KEY, JSON.stringify({firstSaved:first, savedAt:Date.now(), data:state}));
+    }catch(e){ canSave = false; updateSaved(); }
+  }
+  function updateSaved(){
+    var el = document.getElementById('csaved');
+    if(!el) return;
+    el.textContent = canSave ? '\u2713 salvo neste aparelho (90 dias)' : '\u26a0 salvamento indisponível nesta prévia — abra pelo navegador';
+    el.style.color = canSave ? '#7fd6a8' : '#e08a98';
+  }
+  var saved = loadState();
+  if(saved){ COUPLES.forEach(function(c){ if(saved[c]) state[c] = saved[c]; }); }
 
   var couplesEl = document.getElementById('couples');
   var clistsEl  = document.getElementById('clists');
@@ -608,6 +652,7 @@
         el.addEventListener('click',function(){
           state[active][key]=!state[active][key];
           el.classList.toggle('done');
+          saveState();
           updateProgress(); renderTabs();
         });
         col.appendChild(el);
@@ -625,8 +670,19 @@
   function renderAll(){
     whoEl.textContent=active;
     ctotalEl.textContent=TOTAL;
-    renderTabs(); renderLists(); updateProgress();
+    renderTabs(); renderLists(); updateProgress(); updateSaved();
   }
+
+  var resetBtn = document.getElementById('creset');
+  if(resetBtn){
+    resetBtn.addEventListener('click', function(){
+      if(!window.confirm('Zerar a lista de ' + active + '?')) return;
+      state[active] = {};
+      saveState();
+      renderAll();
+    });
+  }
+
   renderAll();
 })();
 </script>
