@@ -151,6 +151,12 @@
   .bmini{display:block;height:5px;width:120px;max-width:60%;border-radius:999px;
     background:rgba(169,210,237,.14);overflow:hidden;margin-top:7px}
   .bmini i{display:block;height:100%;background:linear-gradient(90deg,#3f9e78,#7fd6a8)}
+  .paytag{display:flex;align-items:center;gap:6px;margin-top:7px;font-weight:400;
+    font-family:"Space Mono",monospace;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase}
+  .paytag::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .paytag.online{color:var(--ice)}
+  .paytag.cash{color:#e6b56b}
+  .paytag.later{color:var(--stone)}
   .btotal{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;
     padding:22px;background:linear-gradient(120deg,#12344c,#173a52)}
   .btotal .lab{font-family:"Space Mono",monospace;font-size:.72rem;letter-spacing:.2em;
@@ -545,13 +551,13 @@
       <div class="brow"><span class="name">Hospedagem (Airbnb)</span><span class="pill ok">Pago</span><span class="price">R$ 1.782</span></div>
       <div class="brow"><span class="name">Passagem aérea</span><span class="pill ok">Pago</span><span class="price">R$ 3.200</span></div>
       <div class="brow"><span class="name">Bagagem extra (aérea)</span><span class="pill ok">Pago</span><span class="price">R$ 680</span></div>
-      <div class="brow"><span class="name">Passeios (pacote)<small class="bsub">R$ 204 pago (10%) · falta R$ 1.827</small><span class="bmini"><i style="width:10%"></i></span></span><span class="pill part">Parcial</span><span class="price">R$ 2.031</span></div>
+      <div class="brow"><span class="name">Passeios (pacote)<small class="bsub">R$ 204 pago (10%) · falta R$ 1.827</small><span class="bmini"><i style="width:10%"></i></span><small class="paytag cash">Pagar no 1º passeio · dinheiro</small></span><span class="pill part">Parcial</span><span class="price">R$ 2.031</span></div>
       <div class="brow"><span class="name">Transfer aeroporto<small class="bsub">R$ 64 pago (20%) · R$ 256 em dinheiro no dia</small><span class="bmini"><i style="width:20%"></i></span></span><span class="pill part">Parcial</span><span class="price">R$ 320</span></div>
-      <div class="brow"><span class="name">Ingresso vinícola (Alyan)</span><span class="pill todo">Comprar lá</span><span class="price">R$ 600</span></div>
-      <div class="brow"><span class="name">Ingresso El Colorado</span><span class="pill todo">Comprar</span><span class="price">R$ 340</span></div>
-      <div class="brow"><span class="name">Ingresso Valle Nevado</span><span class="pill todo">Comprar</span><span class="price">R$ 340</span></div>
-      <div class="brow"><span class="name">Equipamento de ski<small class="bsub">2 dias × R$ 450</small></span><span class="pill todo">Comprar</span><span class="price">R$ 900</span></div>
-      <div class="brow"><span class="name">Roupa de neve<small class="bsub">2 dias × R$ 560</small></span><span class="pill todo">Comprar</span><span class="price">R$ 1.120</span></div>
+      <div class="brow"><span class="name">Ingresso vinícola (Alyan)<small class="paytag online">Comprar antes · online</small></span><span class="pill todo">Comprar</span><span class="price">R$ 600</span></div>
+      <div class="brow"><span class="name">Ingresso El Colorado<small class="paytag online">Comprar antes · online</small></span><span class="pill todo">Comprar</span><span class="price">R$ 340</span></div>
+      <div class="brow"><span class="name">Ingresso Valle Nevado<small class="paytag online">Comprar antes · online</small></span><span class="pill todo">Comprar</span><span class="price">R$ 340</span></div>
+      <div class="brow"><span class="name">Equipamento de ski<small class="bsub">2 dias × R$ 450</small><small class="paytag cash">Comprar na parada do passeio</small></span><span class="pill todo">Comprar</span><span class="price">R$ 900</span></div>
+      <div class="brow"><span class="name">Roupa de neve<small class="bsub">2 dias × R$ 560</small><small class="paytag later">Decidir lá</small></span><span class="pill todo">Comprar</span><span class="price">R$ 1.120</span></div>
     </div>
 
     <div class="btotal" style="margin-top:16px;border-radius:14px">
