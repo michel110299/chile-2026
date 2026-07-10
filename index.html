@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chile · Cordillera & Vino — 29 ago a 4 set 2026</title>
+<title>Chile · Cordillera & Vino — 29 ago – 04 set 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -143,7 +143,6 @@
   .pill{font-family:"Space Mono",monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;
     padding:5px 11px;border-radius:999px;white-space:nowrap}
   .pill.ok{background:rgba(127,214,168,.14);color:#7fd6a8}
-  .pill.set{background:rgba(111,176,220,.14);color:var(--ice)}
   .pill.todo{background:rgba(178,68,87,.16);color:#e08a98}
   .pill.part{background:rgba(224,162,78,.16);color:#e6b56b}
   .brow .name .bsub{display:block;font-weight:400;font-family:"Space Mono",monospace;
@@ -224,6 +223,9 @@
   .citem span:last-child{font-size:.94rem;transition:.15s}
   .citem.done span:last-child{color:var(--stone);text-decoration:line-through}
   .check-note{margin-top:24px;color:var(--stone);font-size:.86rem}
+  .choose-q{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.2rem;margin:26px 0 2px}
+  .switch-couple{color:var(--ice);cursor:pointer;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+  .switch-couple:hover{color:var(--frost)}
   .check-reset{background:none;border:1px solid var(--line);color:var(--stone);cursor:pointer;
     font-family:"Space Mono",monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;
     border-radius:999px;padding:6px 12px;margin-left:12px;transition:border-color .15s,color .15s}
@@ -407,7 +409,7 @@
       <text class="grid-txt" x="40" y="96">2000 m</text>
       <text class="grid-txt" x="40" y="156">1000 m</text>
 
-      <path d="M60,220 L60,186 L207,186 L353,74 L500,186 L647,48 L793,190 L940,186 L940,220 Z"
+      <path d="M60,220 L60,186 L207,186 L353,74 L500,186 L647,38 L793,190 L940,186 L940,220 Z"
             fill="url(#ice)" opacity=".18"/>
       <defs>
         <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
@@ -415,15 +417,15 @@
         </linearGradient>
       </defs>
 
-      <path class="elev-path" d="M60,186 L207,186 L353,74 L500,186 L647,48 L793,190 L940,186"/>
+      <path class="elev-path" d="M60,186 L207,186 L353,74 L500,186 L647,38 L793,190 L940,186"/>
 
       <circle class="peak-dot" cx="353" cy="74" r="6"/>
       <text class="peak-label" x="353" y="60" text-anchor="middle">El Colorado</text>
       <text class="peak-alt"   x="353" y="103" text-anchor="middle">~2.430 m</text>
 
-      <circle class="peak-dot" cx="647" cy="48" r="6"/>
-      <text class="peak-label" x="647" y="34" text-anchor="middle">Valle Nevado</text>
-      <text class="peak-alt"   x="647" y="77" text-anchor="middle">~2.860 m</text>
+      <circle class="peak-dot" cx="647" cy="38" r="6"/>
+      <text class="peak-label" x="647" y="24" text-anchor="middle">Valle Nevado</text>
+      <text class="peak-alt"   x="647" y="67" text-anchor="middle">~3.025 m</text>
 
       <circle cx="60" cy="186" r="3.5" fill="#A9D2ED"/>
       <circle cx="207" cy="186" r="3.5" fill="#A9D2ED"/>
@@ -445,16 +447,16 @@
       <text class="grid-txt" x="8" y="166">2000 m</text>
       <text class="grid-txt" x="8" y="246">1000 m</text>
 
-      <path d="M66,286 L165,136 L258,286 L351,101 L450,288 L450,316 L66,316 Z" fill="url(#iceM)" opacity=".18"/>
-      <path class="elev-path" d="M66,286 L165,136 L258,286 L351,101 L450,288"/>
+      <path d="M66,286 L165,136 L258,286 L351,88 L450,288 L450,316 L66,316 Z" fill="url(#iceM)" opacity=".18"/>
+      <path class="elev-path" d="M66,286 L165,136 L258,286 L351,88 L450,288"/>
 
       <circle class="peak-dot" cx="165" cy="136" r="7"/>
       <text class="peak-label" x="165" y="115" text-anchor="middle">El Colorado</text>
       <text class="peak-alt"   x="165" y="163" text-anchor="middle">~2.430 m</text>
 
-      <circle class="peak-dot" cx="351" cy="101" r="7"/>
-      <text class="peak-label" x="351" y="80" text-anchor="middle">Valle Nevado</text>
-      <text class="peak-alt"   x="351" y="128" text-anchor="middle">~2.860 m</text>
+      <circle class="peak-dot" cx="351" cy="88" r="7"/>
+      <text class="peak-label" x="351" y="67" text-anchor="middle">Valle Nevado</text>
+      <text class="peak-alt"   x="351" y="115" text-anchor="middle">~3.025 m</text>
 
       <circle cx="66" cy="286" r="4.5" fill="#A9D2ED"/>
       <circle cx="258" cy="286" r="4.5" fill="#A9D2ED"/>
@@ -515,7 +517,7 @@
           <span class="tag">Esqui · dia útil</span>
           <h3>Valle Nevado</h3>
           <p>O maior resort dos Andes. Chegue por volta das 9h — nas avaliações, a fila de aluguel de equipamento é o gargalo do dia.</p>
-          <span class="alt">&#9650; ~2.860 m · ingresso R$ 340 + equipamento</span>
+          <span class="alt">&#9650; ~3.025 m · ingresso R$ 340 + equipamento</span>
         </div>
       </div>
 
@@ -617,7 +619,7 @@
           <li>Roupa impermeável: jaqueta + calça de neve</li>
           <li>Capacete (recomendado, geralmente incluso)</li>
         </ul>
-        <div class="tip">Alugar em Santiago (lojas em Las Condes ou pela operadora) costuma sair mais barato que no resort — e você evita a fila logo cedo.</div>
+        <div class="tip">O plano é alugar o equipamento de ski na parada do passeio e decidir a roupa na hora. Se quiser comparar preços antes, as lojas de Santiago (Las Condes) costumam sair mais barato que no resort.</div>
       </div>
 
       <div class="card">
@@ -641,19 +643,22 @@
     <span class="eyebrow">Cada casal, sua mala</span>
     <h2>Checklist por casal</h2>
     <p style="color:var(--stone);max-width:560px;margin-top:6px">
-      Escolha o casal e vá marcando. Cada lista guarda o próprio progresso — dá pra ver num relance quem já está com a mala pronta.
+      Toque no seu casal e vá marcando. Fica salvo neste aparelho — na próxima vez o site já abre direto na sua lista.
     </p>
 
-    <div class="couples" id="couples"></div>
+    <div class="couple-choose" id="chooser">
+      <p class="choose-q">Quem é você?</p>
+      <div class="couples" id="couples"></div>
+    </div>
 
-    <div class="check-panel">
+    <div class="check-panel" id="panel" style="display:none">
       <div class="check-top">
         <span class="who" id="who">—</span>
         <span class="cnt"><b id="cdone">0</b> / <span id="ctotal">0</span> itens<button class="check-reset" id="creset" type="button">&#8635; Zerar</button></span>
       </div>
       <div class="check-bar"><i id="cbar"></i></div>
       <div class="clists" id="clists"></div>
-      <p class="check-note"><span class="check-saved" id="csaved">&#10003; salvo neste aparelho</span> · as marcações ficam guardadas no navegador do celular por 90 dias. Itens pessoais — documentos e roupas — cada pessoa do casal precisa dos seus; o que dá pra dividir, como adaptador e power bank, basta um por casal.</p>
+      <p class="check-note"><span class="check-saved" id="csaved">&#10003; salvo neste aparelho</span> · guardado no navegador por 90 dias. Itens pessoais (documentos e roupas) cada um precisa dos seus; adaptador de tomada, basta um por casal. <a class="switch-couple" id="switch">Não é você? Trocar casal</a></p>
     </div>
   </div>
 </section>
@@ -709,74 +714,75 @@
 (function(){
   var COUPLES = ['Gabriel & Isabela','Leo & Maria','Yasmin & Michel'];
   var GROUPS = [
-    {t:'📄 Documentos', items:['Passaporte ou RG','Passagens','Reservas (hotel, passeios, carro)','Seguro viagem','Cartão de crédito']},
-    {t:'👕 Roupas', items:['Casaco quente','Jaqueta corta-vento','Roupas para 5 dias','Pijama','Roupa íntima e meias','Tênis confortável']},
-    {t:'❄️ Esqui', items:['2 blusas térmicas (segunda pele)','2 calças térmicas','2 pares de meias térmicas','Gorro','Luvas','Óculos de sol','Protetor labial','Protetor solar','Alugar no Chile: jaqueta, calça impermeável, botas, capacete e equipamentos']},
-    {t:'🧴 Higiene', items:['Escova e pasta de dentes','Shampoo e sabonete','Desodorante','Hidratante']},
-    {t:'💊 Saúde', items:['Remédios de uso contínuo','Analgésico','Antialérgico']},
-    {t:'📱 Eletrônicos', items:['Celular','Carregador','Power bank','Adaptador de tomada']},
-    {t:'🎒 Mochila de mão', items:['Documentos','Carregadores','Casaco','Remédios','Garrafa de água']}
+    {t:'📄 Documentos e entrada', items:['Passaporte válido, RG (emitido há < 10 anos) ou CIN','Declaração Jurada do SAG (preencher online antes do voo)','Seguro viagem com cobertura para neve','Vouchers (hospedagem, transfer, passeios)','CNH (só se for alugar carro)']},
+    {t:'💵 Dinheiro e conexão', items:['Dinheiro em espécie (reais p/ trocar em câmbio)','Cartão global (Wise ou Nomad)','Cartão de crédito internacional','Chip internacional / eSIM (comprar no Brasil)']},
+    {t:'👕 Roupas (Santiago)', items:['Tênis ou sapato fechado confortável','Botas forradas / impermeáveis','Sobretudo ou casaco pesado','Agasalho de pluma','Blusas de lã grossa','Blusas de lã fina (por baixo)','Casacos de fleece / polar','Calças e saias de tecido quente','Meias grossas de lã (4–5 pares)','Gorro / touca que cubra as orelhas','Luvas bem forradas','Cachecol, lenço ou pashmina','Pijama','Roupa íntima','Chinelos para o hotel']},
+    {t:'❄️ Neve e esqui', items:['Blusa térmica segunda pele (2)','Calça legging térmica (segunda pele)','Calça impermeável para a montanha','Óculos escuros (reflexo da neve)','Protetor solar facial e corporal','Protetor labial potente','Hidratante corporal espesso','Alugar no Chile: jaqueta, calça, botas, capacete e equipamento']},
+    {t:'💊 Farmácia', items:['Remédio para enjoo (estrada do Valle Nevado)','Remédio para diarreia','Dor de cabeça / dor no estômago','Remédios de uso contínuo + receita médica','Soro fisiológico (nariz ressecado)']},
+    {t:'📱 Eletrônicos', items:['Celular e carregadores','Adaptador de tomada universal (220V)']},
+    {t:'🎒 Mochila pequena (passeios)', items:['Garrafa de água','Óculos escuros e protetor solar','Documentos e dinheiro','Remédio para enjoo','Espaço para tirar os casacos']}
   ];
   var TOTAL = 0;
   GROUPS.forEach(function(g){ TOTAL += g.items.length; });
 
   var state = {};
   COUPLES.forEach(function(c){ state[c] = {}; });
-  var active = COUPLES[0];
+  var myCouple = null;
 
   // ----- salvar no navegador por 90 dias -----
   var STORE_KEY = 'chile_checklist_v1';
   var TTL = 90*24*60*60*1000; // 90 dias em ms
   var canSave = true;
 
-  function loadState(){
+  function loadAll(){
     try{
       var obj = JSON.parse(window.localStorage.getItem(STORE_KEY));
-      if(!obj || !obj.data) return null;
+      if(!obj) return;
       var base = obj.firstSaved || obj.savedAt || Date.now();
-      if(Date.now() - base > TTL){ try{ window.localStorage.removeItem(STORE_KEY); }catch(e){} return null; }
-      return obj.data;
-    }catch(e){ canSave = false; return null; }
+      if(Date.now() - base > TTL){ try{ window.localStorage.removeItem(STORE_KEY); }catch(e){} return; }
+      if(obj.data){ COUPLES.forEach(function(c){ if(obj.data[c]) state[c] = obj.data[c]; }); }
+      if(obj.me && COUPLES.indexOf(obj.me) >= 0){ myCouple = obj.me; }
+    }catch(e){ canSave = false; }
   }
-  function saveState(){
+  function saveAll(){
     if(!canSave) return;
     try{
       var prev = null; try{ prev = JSON.parse(window.localStorage.getItem(STORE_KEY)); }catch(e){}
       var first = (prev && prev.firstSaved) ? prev.firstSaved : Date.now();
-      window.localStorage.setItem(STORE_KEY, JSON.stringify({firstSaved:first, savedAt:Date.now(), data:state}));
+      window.localStorage.setItem(STORE_KEY, JSON.stringify({firstSaved:first, savedAt:Date.now(), data:state, me:myCouple}));
     }catch(e){ canSave = false; updateSaved(); }
   }
   function updateSaved(){
     var el = document.getElementById('csaved');
     if(!el) return;
-    el.textContent = canSave ? '\u2713 salvo neste aparelho (90 dias)' : '\u26a0 salvamento indisponível nesta prévia — abra pelo navegador';
+    el.textContent = canSave ? '\u2713 salvo neste aparelho (90 dias)' : '\u26a0 salvamento indispon\u00edvel nesta pr\u00e9via \u2014 abra pelo navegador';
     el.style.color = canSave ? '#7fd6a8' : '#e08a98';
   }
-  var saved = loadState();
-  if(saved){ COUPLES.forEach(function(c){ if(saved[c]) state[c] = saved[c]; }); }
 
-  var couplesEl = document.getElementById('couples');
-  var clistsEl  = document.getElementById('clists');
-  var whoEl   = document.getElementById('who');
-  var cdoneEl = document.getElementById('cdone');
-  var ctotalEl= document.getElementById('ctotal');
-  var cbarEl  = document.getElementById('cbar');
+  var chooser  = document.getElementById('chooser');
+  var panel    = document.getElementById('panel');
+  var couplesEl= document.getElementById('couples');
+  var clistsEl = document.getElementById('clists');
+  var whoEl    = document.getElementById('who');
+  var cdoneEl  = document.getElementById('cdone');
+  var ctotalEl = document.getElementById('ctotal');
+  var cbarEl   = document.getElementById('cbar');
   if(!couplesEl) return;
 
   function doneCount(c){ var n=0,s=state[c]; for(var k in s){ if(s[k]) n++; } return n; }
 
-  function renderTabs(){
+  function renderChooser(){
     couplesEl.innerHTML='';
     COUPLES.forEach(function(c){
       var pct = Math.round(doneCount(c)/TOTAL*100);
       var b=document.createElement('button');
-      b.className='couple'+(c===active?' active':'');
+      b.className='couple';
       var cn=document.createElement('div'); cn.className='cn'; cn.textContent=c;
       var meter=document.createElement('div'); meter.className='cmeter';
       meter.innerHTML='<i style="width:'+pct+'%"></i>';
-      var cp=document.createElement('div'); cp.className='cp'; cp.textContent=pct+'% pronto';
+      var cp=document.createElement('div'); cp.className='cp'; cp.textContent = pct>0 ? pct+'% pronto' : 'toque para come\u00e7ar';
       b.appendChild(cn); b.appendChild(meter); b.appendChild(cp);
-      b.addEventListener('click',function(){ active=c; renderAll(); });
+      b.addEventListener('click', function(){ myCouple=c; saveAll(); showPanel(); });
       couplesEl.appendChild(b);
     });
   }
@@ -788,16 +794,15 @@
       var h=document.createElement('h4'); h.textContent=g.t; col.appendChild(h);
       g.items.forEach(function(txt){
         var key=g.t+'::'+txt;
-        var on=!!state[active][key];
+        var on=!!state[myCouple][key];
         var el=document.createElement('div'); el.className='citem'+(on?' done':'');
         var box=document.createElement('span'); box.className='box';
         var lab=document.createElement('span'); lab.textContent=txt;
         el.appendChild(box); el.appendChild(lab);
-        el.addEventListener('click',function(){
-          state[active][key]=!state[active][key];
+        el.addEventListener('click', function(){
+          state[myCouple][key]=!state[myCouple][key];
           el.classList.toggle('done');
-          saveState();
-          updateProgress(); renderTabs();
+          saveAll(); updateProgress();
         });
         col.appendChild(el);
       });
@@ -806,28 +811,39 @@
   }
 
   function updateProgress(){
-    var d=doneCount(active);
+    var d=doneCount(myCouple);
     cdoneEl.textContent=d;
     cbarEl.style.width=(d/TOTAL*100)+'%';
   }
 
-  function renderAll(){
-    whoEl.textContent=active;
+  function showPanel(){
+    chooser.style.display='none';
+    panel.style.display='block';
+    whoEl.textContent=myCouple;
     ctotalEl.textContent=TOTAL;
-    renderTabs(); renderLists(); updateProgress(); updateSaved();
+    renderLists(); updateProgress(); updateSaved();
+  }
+  function showChooser(){
+    panel.style.display='none';
+    chooser.style.display='block';
+    renderChooser();
   }
 
   var resetBtn = document.getElementById('creset');
   if(resetBtn){
     resetBtn.addEventListener('click', function(){
-      if(!window.confirm('Zerar a lista de ' + active + '?')) return;
-      state[active] = {};
-      saveState();
-      renderAll();
+      if(!window.confirm('Zerar a sua lista?')) return;
+      state[myCouple] = {};
+      saveAll();
+      renderLists(); updateProgress();
     });
   }
+  var switchBtn = document.getElementById('switch');
+  if(switchBtn){ switchBtn.addEventListener('click', showChooser); }
 
-  renderAll();
+  loadAll();
+  if(myCouple){ showPanel(); } else { showChooser(); }
+
 })();
 </script>
 </body>
